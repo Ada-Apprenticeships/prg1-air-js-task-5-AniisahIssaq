@@ -46,6 +46,11 @@ function calculateProfitLoss(flight, airports, aeroplane) {
     const airportCost = (passengersBusiness + passengersEconomy + passengersFirstClass) * 30;
     const totalCost = (airportCost + fuelCost);
 
+    const firstClassRevenue = passengersFirstClass * priceFirstClass;
+    const businessRevenue = passengersBusiness * priceBusiness;
+    const economyRevenue = passengersEconomy * priceEconomy;
+    const totalRevenue = firstClassRevenue + businessRevenue + economyRevenue;
+
 
     
     
