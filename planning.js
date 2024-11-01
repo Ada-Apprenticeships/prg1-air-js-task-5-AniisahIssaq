@@ -48,18 +48,18 @@ function calculateProfitLoss(flight, airports, aeroplanes) {
   const runningCostPerSeatPer100km = parseFloat(aeroplane[1]); 
 
   // calculate costs (added seat cost calculation)
-  const fuelCost = (distance / fuelEconomy) * 1.50;
-  const airportCost = (passengersBusiness + passengersEconomy + passengersFirstClass) * 30;
+  const fuelCost = (distance / fuelEconomy) * 1.50; // calculate fuel cost based on distance and fuel economy 
+  const airportCost = (passengersBusiness + passengersEconomy + passengersFirstClass) * 30; // calculate cost based on number of passengers
   const economySeatCost = (distance / fuelEconomy) * runningCostPerSeatPer100km * passengersEconomy;
   const businessSeatCost = (distance / fuelEconomy) * runningCostPerSeatPer100km * passengersBusiness;
   const firstClassSeatCost = (distance / fuelEconomy) * runningCostPerSeatPer100km * passengersFirstClass;
-  const totalCost = airportCost + fuelCost + economySeatCost + businessSeatCost + firstClassSeatCost;
+  const totalCost = airportCost + fuelCost + economySeatCost + businessSeatCost + firstClassSeatCost; // calculate the total cost of the flight
 
   // calculate revenue
   const firstClassRevenue = passengersFirstClass * priceFirstClass;
   const businessRevenue = passengersBusiness * priceBusiness;
   const economyRevenue = passengersEconomy * priceEconomy;
-  const totalRevenue = firstClassRevenue + businessRevenue + economyRevenue;
+  const totalRevenue = firstClassRevenue + businessRevenue + economyRevenue; // calculate total revenue from ticket sales
 
   const profitLoss = totalRevenue - totalCost; // calculate the profit or loss
 
