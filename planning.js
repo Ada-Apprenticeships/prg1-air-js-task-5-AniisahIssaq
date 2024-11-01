@@ -21,6 +21,30 @@ function readCsv(filename, delimiter = ',') {
     }
 }
 
+function calculateProfitLoss(flight, airports, aeroplane) {
+
+    const airport = airports.find(a => a[1] === flight[1]);
+    if (!airport) {
+        console.error(`Airport Not Found For Flight: ${flight}`);
+        return null;
+    }
+    const aeroplane = aeroplane.find(a => a[0] === flight[0]);
+    if (aeroplane) {
+        console.error(`Aeroplane Not Found For Flight ${flight}`);
+        return null;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
 // Usage example
 const airportsData = readCsv('airports.csv');
 if (airportsData) {
