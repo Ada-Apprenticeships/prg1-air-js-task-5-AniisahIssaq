@@ -33,7 +33,27 @@ function calculateProfitLoss(flight, airports, aeroplane) {
         console.error(`Aeroplane Not Found For Flight ${flight}`);
         return null;
     }
+    const passengersFirstClass = parseInt(flight[5], 10);
+    const passengersBusiness = parseInt(flight[4], 10);
+    const passengersEconomy = parseInt(flight[3], 10);
+    const priceFirstClass = parseFloat(flight[8]);
+    const priceBusiness = parseFloat(flight[7]);
+    const priceEconomy = parseFloat(flight[6]);
+    const fuelEconomy = parseFloat(aeroplane[2]);
+    const runningCostPerSeatPer100km = parseFloat(aeroplane[1]);
+
+    const fuelCost = (distance / fuelEconomy) * 1.50;
+    const airportCost = (passengersBusiness + passengersEconomy + passengersFirstClass) * 30;
+    const totalCost = (airportCost + fuelCost);
+
+
     
+    
+
+
+
+
+
 }
 
 
