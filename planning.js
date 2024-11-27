@@ -89,6 +89,6 @@ function main() {
   }
 
 }
-// call the main function to start the program execution
+// call the main function to start the program execution.
 main();
   
