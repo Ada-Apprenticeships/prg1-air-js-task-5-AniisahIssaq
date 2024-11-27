@@ -85,7 +85,7 @@ function main() {
     console.table(results); // output the results in a table format 
 
   } catch (error) {
-    console.error('An Error Occured:', error); // log any errors that occur 
+    console.error('An Error Occured:', error); // log any errors that occur.
   }
 
 }
